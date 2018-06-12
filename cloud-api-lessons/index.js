@@ -49,6 +49,7 @@ console.log('App booted on port %d', port)
 // Helpers
 
 function handleCloudbitEvent(event) {
+	console.log('event.type: ',event.type);
   switch (event.type) {
     case 'amplitude:delta:ignite':
       // Do whatever you want with the amplitde
