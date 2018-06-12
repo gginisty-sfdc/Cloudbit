@@ -50,7 +50,7 @@ console.log('App booted on port %d', port)
 
 function handleCloudbitEvent(event) {
   switch (event.type) {
-    case 'amplitude':
+    case 'amplitude:delta:ignite':
       // Do whatever you want with the amplitde
       console.log(event.payload)
       console.log('cloudBit input received: %d%', event.payload.percent)
