@@ -51,9 +51,9 @@ console.log('App booted on port %d', port)
 function handleCloudbitEvent(event) {
 	console.log('event.type: ',event.type);
   switch (event.type) {
-    case 'amplitude:delta:ignite':
+    case 'amplitude':
       // Do whatever you want with the amplitde
-      console.log(event.payload)
+      console.log('inside switch case, event.payload: ',event.payload)
       console.log('cloudBit input received: %d%', event.payload.percent)
       fetch('https://legocity4.my.salesforce.com/services/data/v42.0/sobjects/Tire_event__e', { 
         method: 'POST',
