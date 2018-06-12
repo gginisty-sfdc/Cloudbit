@@ -57,7 +57,7 @@ function handleCloudbitEvent(event) {
       console.log('cloudBit input received: %d%', event.payload.percent)
       fetch('https://legocity4.my.salesforce.com/services/data/v42.0/sobjects/Tire_event__e', { 
         method: 'POST',
-        body: JSON.stringify({"Tire_id__c":"155","Tire_id__c":event.payload.percent}),
+        body: JSON.stringify({"Tire_id__c":"155","Pressure__c":event.payload.percent}),
         headers: {'Content-Type': 'application/json', 'authorization': 'Bearer 00Df4000002cqlJ!AREAQF9F0xltejfGtMyIXKRPRq2PNl7PauGLqEjvXHmNA3pp4lVrlD2vVZly8JSfiALfZxkI1lDfyIq9giOfxL0W0I9X2asK'},
       })
 	      .then(res => res.json())
