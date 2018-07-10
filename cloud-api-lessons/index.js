@@ -58,7 +58,7 @@ function handleCloudbitEvent(event) {
       fetch('https://legocity4.my.salesforce.com/services/data/v42.0/sobjects/Tire_event__e', { 
         method: 'POST',
         body: JSON.stringify({"Tire_id__c":"156","Pressure__c":event.payload.percent}),
-        headers: {'Content-Type': 'application/json', 'authorization': 'Bearer 00Df4000002cqlJ!AREAQHIsTlJC_CFyv_cnVHDjNx0.AB6WvddktRWkltcy_ji25lAFz7roitf0IPNB5v3hbfaPpA3mFBPFda_jHCwQ1yhZToP3'},
+        headers: {'Content-Type': 'application/json', 'authorization': 'Bearer 00Df4000002cqlJ!AREAQAHUBih5PskdR7UGzUo2heJgT4xXAAkHIe6l0sTHyjchBHpRVhlXwwCDbAi73UegWeOYv9vrdKIi_s1_zbwc3ccI6v.1'},
       })
 	      .then(res => res.json())
         .then(json => console.log("json", json))
